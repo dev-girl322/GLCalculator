@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Share+Tech+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f7b021;
+  --border-color: #a65000;
+  --btn-bg-color: #f7d59d;
+  --screen-bg-color: #a6f2f7;
+  --solar-bg: rgb(133 123 111);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 30%;
+  padding: 1em;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  border: 7px solid var(--border-color);
+}
+
+.topsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topsection .solar {
+  height: 10vh;
+  width: 50%;
+  background-color: gray;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.redtype {
+  background: #f74e44;
+  color: white !important;
+}
+.bluetype {
+  background: #3ebddd;
+  color: white !important;
+}
+.greentype {
+  background: #5ec28b;
+  color: white !important;
+}
+.nborder {
+  border-radius: 10px !important;
+  border: 5px solid var(--border-color) !important;
+}
+
+.topsection .solar .bar {
+  background-color: hsl(33, 9%, 48%, 1);
+  border: 1px solid var(--border-color);
+}
+
+.topsection .solar .bar:hover {
+  background-color: hsl(33, 9%, 48%, 0.1);
+}
+
+.screen {
+  border: 7px solid var(--border-color);
+  background-color: var(--screen-bg-color);
+  width: 100%;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: right;
+  padding-inline: 1em;
+}
+
+.screen p {
+  font-size: 4.5rem;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.btns-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  margin: 5px;
+  font-size: 3rem;
+  border: 7px solid var(--border-color);
+  border-radius: 15px;
+  color: var(--border-color);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-family: "Share Tech Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.history svg {
+  cursor: pointer;
+}
+
+.history svg path {
+  color: var(--border-color);
+}
