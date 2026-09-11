@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GLCalculator</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="container">
+        <div class="sidebar">
+        </div>
         <div class="topsection">
             <div class="history">
-                <button class="btn nborder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                <button class="btn nborder" id="history-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" class="historyicn" height="50"
+                        viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M13.26 3C8.17 2.86 4 6.95 4 12H2.21c-.45 0-.67.54-.35.85l2.79 2.8c.2.2.51.2.71 0l2.79-2.8a.5.5 0 0 0-.36-.85H6c0-3.9 3.18-7.05 7.1-7c3.72.05 6.85 3.18 6.9 6.9c.05 3.91-3.1 7.1-7 7.1c-1.61 0-3.1-.55-4.28-1.48a.994.994 0 0 0-1.32.08c-.42.42-.39 1.13.08 1.49A8.86 8.86 0 0 0 13 21c5.05 0 9.14-4.17 9-9.26c-.13-4.69-4.05-8.61-8.74-8.74m-.51 5c-.41 0-.75.34-.75.75v3.68c0 .35.19.68.49.86l3.12 1.85c.36.21.82.09 1.03-.26c.21-.36.09-.82-.26-1.03l-2.88-1.71v-3.4c0-.4-.34-.74-.75-.74" />
                     </svg>
@@ -33,13 +37,13 @@
             </div>
         </div>
         <div class="screen">
-            <p>00</p>
+            <input type="text" placeholder="00">
         </div>
         <div class="btns-section">
             <button class="btn redtype">AC</button>
             <button class="btn redtype">ON</button>
             <button class="btn redtype">OFF</button>
-            <button class="btn bluetype">
+            <button class="btn bluetype" id="backspacebtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="m11.4 16l2.6-2.6l2.6 2.6l1.4-1.4l-2.6-2.6L18 9.4L16.6 8L14 10.6L11.4 8L10 9.4l2.6 2.6l-2.6 2.6zM9 20q-.475 0-.9-.213t-.7-.587L2 12l5.4-7.2q.275-.375.7-.587T9 4h11q.825 0 1.413.587T22 6v12q0 .825-.587 1.413T20 20z" />
@@ -48,7 +52,7 @@
             <button class="btn">7</button>
             <button class="btn">8</button>
             <button class="btn">9</button>
-            <button class="btn greentype">
+            <button class="btn greentype" id="divide">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2">
@@ -61,7 +65,7 @@
             <button class="btn">4</button>
             <button class="btn">5</button>
             <button class="btn">6</button>
-            <button class="btn greentype">
+            <button class="btn greentype" id="multiply">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="m13.41 12l6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29l-6.3 6.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l6.29-6.3l6.29 6.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z" />
