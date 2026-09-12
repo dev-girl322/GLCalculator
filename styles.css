@@ -126,6 +126,10 @@ body {
   align-items: center;
 }
 
+.btn.off {
+  pointer-events: none;
+}
+
 .historyicn {
   transition: all 0.5s ease;
 }
@@ -143,6 +147,52 @@ body {
 }
 
 .history svg path {
+  color: var(--border-color);
+}
+
+.clrhistorybtncontainer {
+  position: sticky;
+  bottom: 0;
+}
+
+.clrhistorybtncontainer .clrhistorybtn {
+  font-size: 2.5rem;
+  font-family: "Share Tech Mono", monospace;
+  width: 100%;
+  background-color: var(--border-color);
+  border: none;
+  outline: none;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.clrhistorybtncontainer .clrhistorybtn.invisible {
+  display: none;
+}
+
+.nohistory {
+  background-color: var(--bg-color);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nohistory svg path {
+  fill: var(--border-color);
+}
+
+.clrhistorybtncontainer .clrhistorybtn:active {
+  background-color: var(--bg-color);
+  color: var(--border-color);
+}
+
+.nohistorytext {
+  font-size: 2.5rem;
+  font-family: "Share Tech Mono", monospace;
+  margin-top: 1rem;
   color: var(--border-color);
 }
 
@@ -180,4 +230,16 @@ body {
 .single-history-item p {
   text-align: right;
   color: var(--border-color);
+}
+
+.nohistory {
+  display: none;
+}
+
+.sidebar:not(:has(.history-items *)) .nohistory {
+  display: flex;
+}
+
+.sidebar:not(:has(.history-items *)) .clrhistorybtncontainer {
+  display: none;
 }
